@@ -1,0 +1,16 @@
+## 当insert的表的字段太多
+
+
+### 原因
+
+当表的字段太多，能不能有其他的解决方法呢？
+
+比如下面表的字段就非常多
+```sql
+INSERT INTO V_MEDICATION 
+( PATIENT_ID,VISIT_ID ,ASPL,LBGL,TGRL,ATFTT,RSFTT,FFTT,PFTT ,FXPL,PDPL,YNPL,EBST,TMST,ALSTZ,MTLEHSP,MTLEPP,FSM,LNZ,
+ YDS,LFSB,DBJQZ,HFL,GS,DFZGS,EJSG,AKBT,GLQT,XGLT,KGLJ,GLMN) 
+ values(...)
+```
+
+
