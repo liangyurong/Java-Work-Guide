@@ -3,7 +3,7 @@
 
 ### 001 -  maven不是版本管理工具吗？为什么添加依赖还是需要填写version？
 
-```text
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
