@@ -11,17 +11,14 @@
 3、按esc退出insert模式，再按：，并且输入wq。代表保存并且退出
 
     ./redis.conf
+
+### 启动redis
+    打开xshell    
+    cd ..
+    cd redis/src
+    ./redis-server  /redis/redis.conf  (注意: redis.conf文件不在同一层级)
+    ./redis-cli   （执行此命令才能在xshell中执行redis命令）
     
-### 启动redis  (注意: redis.conf文件不在同一层级)
-
-    来到/redis/src目录，执行 ./redis-server  /redis/redis.conf
-
-### 连接redis
-
-    ./redis-cli
-
-
-
 
 
 
