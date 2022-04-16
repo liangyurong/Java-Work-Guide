@@ -52,7 +52,8 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer>, Jp
 ```
 
 ### 测试代码
-```java
+
+```jshelllanguage
 package com.jpa.specifications;
 
 import com.jpa.specifications.domain.Customer;
