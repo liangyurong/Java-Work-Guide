@@ -18,8 +18,6 @@
 - HashMap内部的节点是无顺序的
 - 有序的map有：LinkedHashMap和TreeMap
 
-
-
 问题
 
 1. HashMap是怎么进行扩容的？

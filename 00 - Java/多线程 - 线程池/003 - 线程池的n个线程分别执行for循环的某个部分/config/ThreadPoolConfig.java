@@ -15,7 +15,7 @@ public class ThreadPoolConfig {
     /**
      * 配置第1个线程池
      */
-    @Bean("executor1")
+    @Bean("executor1") // 线程池名称
     public Executor executor1() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setThreadNamePrefix("线程池1：");

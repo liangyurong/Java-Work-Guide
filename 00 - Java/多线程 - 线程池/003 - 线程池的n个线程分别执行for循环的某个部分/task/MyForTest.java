@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @EnableAsync
-public class MyForTest {
+public class MyTask {
 
     /**
      * 该@Async注解是可以指定使用哪个线程池的
