@@ -1,0 +1,1 @@
+比较麻烦，首先需要创建DataConfig类，然后注入到Config类，最后在Test类中取出来

@@ -1,0 +1,5 @@
+
+
+
+无法直接使用FileChannel，需要通过使用inputStream，outputStream或者RandomAccessFile来获取FileChannel实例
+

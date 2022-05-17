@@ -1,0 +1,2 @@
+
+ServerSocketChannel是一个基于通道的监听器，不进行数据的传输 

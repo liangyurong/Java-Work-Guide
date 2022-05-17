@@ -1,0 +1,3 @@
+### 扫描+注解的方式
+
+DataConfig类：使用注解@Component
