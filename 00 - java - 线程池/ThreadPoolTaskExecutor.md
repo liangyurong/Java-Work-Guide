@@ -1,0 +1,22 @@
+## ThreadPoolTaskExecutor
+
+
+###  ThreadPoolTaskExecutor
+
+ThreadPoolTaskExecutor是Spring基于java本身的线程池ThreadPoolExecutor做的二次封装，主要目的还是为了更加方便的在spring框架体系中使用线程池。
+
+### 为什么使用ThreadPoolTaskExecutor
+
+一句话：可以让使用线程池的编码更方便更优雅。
+
+使用线程池时，主要有两种方式：ThreadPoolExecutor和ThreadPoolTaskExecutor
+
+目前大家都在使用spring全家桶编写服务代码。也都习惯了使用注解式编程方式。
+
+ThreadPoolTaskExecutor本身相当于一个普通的bean，他只是基于ThreadPoolExecutor做了一定的封装，线程池的核心逻辑还是ThreadPoolExecutor来实现的，一些线程池的基本配置参数，也和原始的ThreadPoolExecutor的保持一致。
+
+### ThreadPoolExecutor
+
+原始的使用线程池，要么直接new ThreadPoolExecutor，要么使用jdk中的Executors工具类，此工具类提供了一些常用的api来创建线程池。
+
+但是，都需要在业务代码中显式的编程，代码不够简洁。

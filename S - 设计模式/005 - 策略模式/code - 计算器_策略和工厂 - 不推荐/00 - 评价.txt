@@ -1,0 +1,2 @@
+
+依然要在CalSingleFactory修改逻辑代码
