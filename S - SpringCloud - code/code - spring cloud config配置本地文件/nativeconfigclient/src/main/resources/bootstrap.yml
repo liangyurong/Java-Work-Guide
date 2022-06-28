@@ -1,0 +1,16 @@
+
+spring:
+  cloud:
+    config:
+      name: configclient # 读取config.yml文件 ，不需要后缀 （从git上读取的资源名称）
+      profile: dev
+      uri: http://127.0.0.1:8090 # 从该ip端口，访问yml文件
+      fail-fast: true
+
+## name+profile 拼接本地配置文件名字 : 读取 configclient-dev.yml
+
+## spring.cloud.config.uri : 本地config-server的访问路径
+
+## spring.cloud.config.fail-fast : 设置客户端优先判断config server 获取是否正常
+
+

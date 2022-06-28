@@ -1,0 +1,17 @@
+server:
+  port: 8761 # eureka默认端口
+
+spring:
+  application:
+    name:  eureka-server # 应用名称
+
+eureka: # eureka的配置分为3类：server、client、instance
+  server:
+    eviction-interval-timer-in-ms: 10000 # 服务端间隔n秒做定期删除应用的服务（默认30s，这里设置10s）
+    renewal-percent-threshold: 0.85 # 续约百分比；超过85%的应用没和服务端续约，那么eureka会启动自我保护机制，不会删除任何一个应用
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port} # 主机名称 : 应用名称 : 端口
+    prefer-ip-address: true # 以ip形式显示具体的服务信息
+    lease-renewal-interval-in-seconds: 5 # 5秒。服务实例的续约时间间隔
+

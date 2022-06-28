@@ -40,7 +40,13 @@ sql
 
     方法1：select b.* from buy b where b.id in (select p.id from pay p)
 
-    方法2：select b.*  from buy b inner join pay p on b.id = p.id;
+    方法2：select b.*  from buy b inner join pay p on b.id = p.id;  // inner join不会产生null
+
+    方法3：select b.*  from buy b left join pay p on  b.id = p.id  where p.id is not null;
+
+    方法4：SELECT b.* FROM buy b NATURAL JOIN pay p; // 自动查询两张连接表中所有相同的字段，然后进行等值连接（不推荐，不够灵活）
+
+    哪个方法更好呢？
 
 结果
 

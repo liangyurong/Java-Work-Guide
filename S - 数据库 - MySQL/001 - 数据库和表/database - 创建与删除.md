@@ -1,0 +1,7 @@
+创建 - db01数据库
+
+    CREATE DATABASE IF NOT EXISTS db01 CHARACTER SET 'utf8';
+
+删除 - db01数据库
+
+    DROP DATABASE db01;

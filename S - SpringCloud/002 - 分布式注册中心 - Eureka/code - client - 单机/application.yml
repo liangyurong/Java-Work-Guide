@@ -1,0 +1,20 @@
+server:
+  port: 8080 # 客户端端口无要求
+
+spring:
+  application:
+    name:  eureka-client-a # 应用名称
+
+# 将自己注册到eureka-server（含义：将自己的一些信息比如ip，端口号发送到eureka）
+eureka:
+  client:
+    service-url: # 指定注册地址
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true # true:往eureka-server注册
+    fetch-registry: true # true:拉取服务列表到自己的本地
+    registry-fetch-interval-seconds: 10 # 为了缓解服务列表的脏读问题，每间隔10s就拉取一次服务列表（时间越短脏读越少性能越浪费）
+  instance:
+    hostname: localhost # 应用的主机名称，最好写主机ip
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port} # 主机名称 : 应用名称 : 端口
+    prefer-ip-address: true # 以ip形式显示具体的服务信息
+    lease-renewal-interval-in-seconds: 5 # 5秒。服务实例的续约时间间隔

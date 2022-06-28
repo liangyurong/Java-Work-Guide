@@ -1,0 +1,36 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: feign
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+
+# 开启熔断机制(spring cloud 2.3.12)
+feign:
+  circuitbreaker:
+    enabled: true
+
+# 服务监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
+
+# 解决bug：Unable to connect to Command Metric Stream
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+#ribbon:
+#  ReadTimeout: 3 # 程序执行过程所用的时间不能超过这个时间，否则熔断.默认是1s
+#  ConnectTimeout: 4 # 和服务建立连接所用的时间不能超过这个时间，否则熔断
