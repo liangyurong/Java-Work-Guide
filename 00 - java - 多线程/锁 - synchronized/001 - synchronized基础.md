@@ -68,16 +68,9 @@ synchronized可以保证在同一时刻，只有一个线程能够执行某一�
 1. 获取锁的线程执行完了该代码块，会调用monitorexit释放锁
 2. 线程执行出现异常
 
-### Synchronized和lock的区别
 
-1. Lock是java实现的类，synchronized是java中的关键词
-2.
 
-### Lock的实现
 
-1. 读可以使用readLock，写可以使用writeLock
-2. ReentrankLock，可重入锁，当然synchronzied也是可重入锁
-3. ReentrankReadWriteLock，可重入的读写锁
 
 
 

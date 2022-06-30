@@ -12,6 +12,6 @@ synchronized是非公平锁
 
     一个对象关联一个monitor。不同的对象关联不同的monitor
 
-    获取类对象的monitor监视器来实现加锁
+    获取类对象的monitor监视器来实现加锁，线程获取到monitor才能继续执行
 
-    
+

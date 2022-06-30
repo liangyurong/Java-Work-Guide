@@ -17,3 +17,13 @@ explain sql语句
     // 在显示的key中看看是否为null，为null说明没有命中索引
     // key = primary，则说明使用了主键索引
 
+
+### explain显示的列
+
+possible_keys 理论上用到的索引
+
+key 实际用到的索引
+
+type 采用什么类型去扫描字段。all代表全表索引
+
+extra 额外动作（using where代表使用了where查询）
