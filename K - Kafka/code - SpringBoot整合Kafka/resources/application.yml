@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: 192.168.64.130:9092 # 虚拟机的地址，kafka默认端口是9092
+    consumer:
+      bootstrap-servers: ${spring.kafka.producer.bootstrap-servers}
+      group-id: consumer
+      enable-auto-commit: true
+      auto-offset-reset: latest
+    listener:
+      missing-topics-fatal: false
+

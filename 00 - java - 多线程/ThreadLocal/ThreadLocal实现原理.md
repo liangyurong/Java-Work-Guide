@@ -1,0 +1,4 @@
+
+每个Thread维护一个ThreadLocalMap。
+
+map的key是ThreadLocal本身，value是真正要存储的值（线程的变量副本）

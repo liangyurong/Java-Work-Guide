@@ -1,0 +1,4 @@
+
+synchronized是一个关键字，ThreadLocal是一个类
+
+syn会造成程序的性能降低
