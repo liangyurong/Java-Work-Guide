@@ -1,19 +1,28 @@
+### docker安装redis
 
-### 以管理员打开powershell
+安装
 
-docker run -d -p 6379:6379 --name redis redis:latest
+    docker pull redis
 
-### 命令解释
+创建文件
 
-docker run ： docker运行一个软件
+    mkdir -p  /mydata/redis/conf
+    cd /mydata/redis/conf
+    touch redis.conf
 
--d：后台运行
+创建redis容器
 
--p 6379:6379 ： 表示端口的暴露，将容器里面的6379端口暴露到宿主机中。 左边是宿主机端口，右边是容器端口。
+    docker run -p 6379:6379 --name redis -v /mydata/redis/data:/data  -v /mydata/redis/conf/redis.conf:/etc/redis/redis.conf -d redis redis-server /etc/redis/redis.conf
 
---name redis：将此容器命名为redis
+查看运行中的镜像
 
-redis:latest : 使用redis的最新版本 （可以指定docker的版本）
+    docker images
+
+启动redis，进入命令行
+
+    docker exec -it redis redis-cli
+
+    退出：ctrl+c
 
 
 

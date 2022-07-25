@@ -1,5 +1,9 @@
 ### 生产者和消费者示例
 
+说明
+
+    这是centos直接安装的kafka
+
 打开新的xshell对话，建立一个test的topic
 
     cd kafka
